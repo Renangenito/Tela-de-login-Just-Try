@@ -6,32 +6,69 @@
     align-items: center;
 }
 
+h4{
+    margin: 0;
+    margin-right: 295px;
+}
 
 .inputEmail, .inputSenha{
     width: 345px;
     height: 50px;
     border: 1px solid #999898;
-    border-radius: 10px;
-    margin-top: 2.5px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    
 }
 
 .botao{
     width: 345px;
     height: 50px;
     border: none;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    margin-top: 5px;
+   border-radius: 25px;
     color: white;
     font-weight: bold;
     font-size: 20px;
     background-color: #00aff0;
 }
+.botao-linkedin,  .botao-instagram{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 345px;
+    height: 50px;
+    border: none;
+   border-radius: 25px;
+    background-color: #00aff0;
+    color: white;
+    font-weight: bold;
+}
+
+.botao-linkedin:hover, .botao-instagram:hover{
+    background-color: #049ad1;
+    cursor: pointer;
+}
+
+.botao-linkedin:active, .botao-instagram:active{
+    background-color: #00aff0;    
+}
+.botao-linkedin{
+    margin-top: 60px;
+}
+
+.botao-instagram{
+    margin-top: 20px;
+}
+.icones{
+    font-size: 40px;
+    margin-left: 7px;
+}
+.texto-icone{
+    margin-left: 60px;
+}
 
 .botao:hover{
     background-color: #049ad1;
+    cursor: pointer;
 }
 .botao:active{
     background-color: #00aff0;
