@@ -12,14 +12,31 @@ h4{
 }
 
 .inputEmail, .inputSenha{
+    width: 300px;
+    height: 50px;
+    border:none;
+    border-radius: 8px;
+    background: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.div-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     width: 345px;
     height: 50px;
     border: 1px solid #999898;
     border-radius: 8px;
     margin-bottom: 20px;
-    
+    font-size: 30px;
 }
 
+.eye:hover{
+    cursor: pointer;
+}
 .botao{
     width: 345px;
     height: 50px;
@@ -28,48 +45,46 @@ h4{
     color: white;
     font-weight: bold;
     font-size: 20px;
-    background-color: #00aff0;
+    background-color: #b400ff;
 }
-.botao-linkedin,  .botao-instagram{
+.botao-register{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     width: 345px;
     height: 50px;
     border: none;
    border-radius: 25px;
-    background-color: #00aff0;
+    background-color: #b400ff;
     color: white;
+    font-size: 20px;
     font-weight: bold;
 }
 
-.botao-linkedin:hover, .botao-instagram:hover{
-    background-color: #049ad1;
+.botao-register:hover, .botao-instagram:hover{
+    background-color: #710e9b;
     cursor: pointer;
 }
 
-.botao-linkedin:active, .botao-instagram:active{
-    background-color: #00aff0;    
-}
-.botao-linkedin{
-    margin-top: 60px;
+.botao-register:active{
+    background-color: #b400ff;    
 }
 
-.botao-instagram{
-    margin-top: 20px;
-}
-.icones{
-    font-size: 40px;
-    margin-left: 7px;
-}
-.texto-icone{
-    margin-left: 60px;
-}
 
 .botao:hover{
-    background-color: #049ad1;
+    background-color: #710e9b;
     cursor: pointer;
 }
 .botao:active{
-    background-color: #00aff0;
+    background-color: #b400ff;
 }
+
+.cadastre{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    align-items: center;
+    margin-top: 90px;
+}
+
