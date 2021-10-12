@@ -1,4 +1,4 @@
-.formulario{
+.login{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -56,19 +56,20 @@ h4{
     height: 50px;
     border: none;
    border-radius: 25px;
-    background-color: #b400ff;
+    background-color: #c857f8;
     color: white;
     font-size: 20px;
     font-weight: bold;
+    
 }
 
 .botao-register:hover, .botao-instagram:hover{
-    background-color: #710e9b;
+    background-color: #b23fe4;
     cursor: pointer;
 }
 
 .botao-register:active{
-    background-color: #b400ff;    
+    background-color: #c857f8;    
 }
 
 

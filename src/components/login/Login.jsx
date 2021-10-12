@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import  {Link}  from 'react-router-dom'
 
 
-const FormularioCadastro = () => {
+
+const Login = () => {
     const [email, setEmail] = useState("") //iniciando um estado
     const [password, setPassword] = useState("")
     const [show, setShow] = useState(false)
@@ -15,7 +17,7 @@ const FormularioCadastro = () => {
     }
     return (
 
-        <form className="formulario" action="">
+        <form className="login" action="">
             <h4>Log in</h4>
 
             <div className="div-input">
@@ -28,7 +30,7 @@ const FormularioCadastro = () => {
                     //capturando o valor do input quando digitado através do onchenge
 
                     id="" required
-                    placeholder="   Digíte o seu email" />
+                    placeholder="   Type your email" />
                     
             </div>
             <div className="div-input">
@@ -41,7 +43,7 @@ const FormularioCadastro = () => {
                      //capturando o valor do input quando digitado através do onchenge
 
                     id="" required
-                    placeholder="  Digíte a sua senha" />
+                    placeholder="  Type your password" />
 
                 {show ? <FaEye className="eye" onClick={handleClick}/> : //Aqui é a lógica para mostrar o icone eye
                 <FaEyeSlash className="eye" onClick={handleClick}/>} 
@@ -51,8 +53,8 @@ const FormularioCadastro = () => {
 
             <div className="cadastre">
                 <h3>don t have an account</h3>
-                <div className="botao-register">
-               <p className="texto-icone">REGISTER</p>
+                <div  className="botao-register"> 
+               <p  className="texto-icone"><Link  to="/formulario" >REGISTER</Link></p>
             </div>
             
             </div>
@@ -64,4 +66,4 @@ const FormularioCadastro = () => {
 
 }
 
-export default FormularioCadastro;
+export default Login;
