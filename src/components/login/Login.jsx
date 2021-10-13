@@ -3,7 +3,6 @@ import { FaEyeSlash, FaEye } from "react-icons/fa";
 import  {Link}  from 'react-router-dom'
 
 
-
 const Login = () => {
     const [email, setEmail] = useState("") //iniciando um estado
     const [password, setPassword] = useState("")
@@ -17,7 +16,7 @@ const Login = () => {
     }
     return (
 
-        <form className="login" action="">
+        <form className="login" action="/">
             <h4>Log in</h4>
 
             <div className="div-input">
@@ -30,7 +29,7 @@ const Login = () => {
                     //capturando o valor do input quando digitado através do onchenge
 
                     id="" required
-                    placeholder="   Type your email" />
+                    placeholder="  Type your email" />
                     
             </div>
             <div className="div-input">
@@ -38,12 +37,15 @@ const Login = () => {
                     className="inputSenha"
                     type={show ? "text" : "password"} //Aqui é a lógica para mostrar ou não a senha
                     name=""
+                    maxLength="16"
+                    minLength="6"
                     value={password}//valor inicial do usestate
                     onChange={e => setPassword(e.target.value)}
                      //capturando o valor do input quando digitado através do onchenge
 
                     id="" required
                     placeholder="  Type your password" />
+                    
 
                 {show ? <FaEye className="eye" onClick={handleClick}/> : //Aqui é a lógica para mostrar o icone eye
                 <FaEyeSlash className="eye" onClick={handleClick}/>} 
