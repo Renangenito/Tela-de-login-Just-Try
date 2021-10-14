@@ -1,16 +1,33 @@
 import React, { useState } from 'react';
 
 
+
 const Formulario = () => {
     const [nome, setNome] = useState("")
     const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [confirmPassword, setConfirmPassword] = useState("")
+    const [senha, setSenha] = useState("")
+    const [confirmSenha, setConfirmSenha] = useState("")
+   
+
+   
+
+    const pagina = () => {
+
+        if (senha === confirmSenha) {
+            return "/";
+        } else {
+            return "";
+
+        }
+
+
+    }
 
     return (
 
         <div className="formulario">
-            <form className="formulario-cadastro" name="form" action="/" >
+            <form className="formulario-cadastro" name="form" action={pagina()} >
+
                 <h2>Registration</h2>
                 <div className="div-inputs">
                     <label htmlFor="nome">Name</label>
@@ -34,15 +51,17 @@ const Formulario = () => {
                 </div>
                 <div className="div-inputs">
                     <label htmlFor="password">Password</label>
+                    
                     <input className="formulario-cadastro-senha"
                         type="password"
                         name="senha"
                         id="password"
                         minLength="6"
                         maxLength="16"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
+                        value={senha}
+                        onChange={e => setSenha(e.target.value)}
                         required placeholder="  Type your password" />
+                    
                 </div>
                 <div className="div-inputs">
                     <label htmlFor="confirm-password">Confirm password</label>
@@ -52,14 +71,17 @@ const Formulario = () => {
                         id="confirm-password"
                         minLength="6"
                         maxLength="16"
-                        value={confirmPassword}
-                        onChange={e => setConfirmPassword(e.target.value)}
+                        value={confirmSenha}
+                        onChange={e => setConfirmSenha(e.target.value)}
                         required placeholder="  Enter your password again" />
-                    <button className="formulario-cadastro-botao" >Register</button>
+                    <span id="erro"></span>
+
+                    <button type="submit" className="formulario-cadastro-botao" >Register</button>
+                  
 
                 </div>
 
-
+               
             </form>
 
         </div>
