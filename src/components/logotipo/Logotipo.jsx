@@ -4,7 +4,7 @@ import React from 'react';
 const Logotipo = () =>{
     return(
         <div className="esquerda">
-             <h1>Just login </h1>
+             <h1 className="logotipo-texto">Between </h1>
         </div>
        
     )

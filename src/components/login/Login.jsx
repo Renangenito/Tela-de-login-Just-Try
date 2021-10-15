@@ -18,7 +18,7 @@ const Login = () => {
     
     return (
 
-        <form className="login" action="/">
+        <form className="login" action="/sucesso">
             <h4>Log in</h4>
 
             <div className="div-input">
